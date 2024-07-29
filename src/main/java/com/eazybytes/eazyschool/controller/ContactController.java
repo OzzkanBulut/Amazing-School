@@ -16,6 +16,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import jakarta.validation.Valid;
 
+import java.util.List;
+
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 @Slf4j
@@ -46,9 +48,9 @@ public class ContactController {
         return new ModelAndView("redirect:/contact");
     }*/
 
-    @RequestMapping(value = "/saveMsg",method = POST)
+    @RequestMapping(value = "/saveMsg", method = POST)
     public String saveMessage(@Valid @ModelAttribute("contact") Contact contact, Errors errors) {
-        if(errors.hasErrors()){
+        if (errors.hasErrors()) {
             log.error("Contact form validation failed due to : " + errors.toString());
             return "contact.html";
         }
@@ -57,6 +59,15 @@ public class ContactController {
         return "redirect:/contact";
     }
 
+    @RequestMapping("/displayMessages")
+    public ModelAndView displayMessages(Model model) {
+
+        List<Contact> contactMsgs = contactService.findMsgsWithOpenStatus();
+        ModelAndView modelAndView = new ModelAndView("messages.html");
+        modelAndView.addObject("contactMsgs", contactMsgs);
+        return modelAndView;
+
+    }
 
 
 }
