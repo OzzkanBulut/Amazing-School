@@ -1,20 +1,20 @@
 package com.eazybytes.eazyschool.model;
 
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
+@Entity
+@Table(name = "holidays")
 public class Holiday extends BaseEntity {
 
+
+    @Id
     private String day;
     private String reason;
+
+    @Enumerated(EnumType.STRING)
     private Type type;
-
-    public Holiday(String s, String s1, Type type) {
-        day = s;
-        reason = s1;
-        this.type = type;
-    }
-
 
     public enum Type {
         FESTIVAL, FEDERAL

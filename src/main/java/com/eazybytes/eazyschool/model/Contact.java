@@ -1,6 +1,8 @@
 package com.eazybytes.eazyschool.model;
 
+import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.validator.constraints.CreditCardNumber;
 
 import jakarta.validation.constraints.*;
@@ -11,8 +13,13 @@ equals(), hashCode(), toString() methods & Constructor at compile time.
 This makes our code short and clean.
 * */
 @Data
+@Entity
+@Table(name = "contact_msg")
 public class Contact extends BaseEntity {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "contact_id")
     private int contactId;
 
     /*
