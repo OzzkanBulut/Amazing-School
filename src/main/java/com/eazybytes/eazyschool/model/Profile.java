@@ -39,7 +39,7 @@ public class Profile {
 
     @NotBlank(message = "Zip code must not be blank")
     @Pattern(regexp = "(^$|[0-9]{5})",message = "Zip code must be 5 digits")
-    private int zipCode;
+    private String zipCode;
 
 
 
