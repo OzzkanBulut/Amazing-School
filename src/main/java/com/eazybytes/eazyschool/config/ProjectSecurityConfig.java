@@ -25,6 +25,7 @@ public class ProjectSecurityConfig {
                         .requestMatchers("/holidays/**").permitAll()
                         .requestMatchers("/contact").permitAll()
                         .requestMatchers("/saveMsg").permitAll()
+                        .requestMatchers("/favicon.ico").hasAnyRole("STUDENT","ADMIN")
                         .requestMatchers("/courses").permitAll()
                         .requestMatchers("/about").permitAll()
                         .requestMatchers("/assets/**").permitAll()
