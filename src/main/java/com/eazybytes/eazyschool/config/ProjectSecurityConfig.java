@@ -14,19 +14,21 @@ public class ProjectSecurityConfig {
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
 
-        http.csrf((csrf) -> csrf.ignoringRequestMatchers("/saveMsg").ignoringRequestMatchers("/public/**"))
+        http.csrf((csrf) -> csrf.ignoringRequestMatchers("/saveMsg").ignoringRequestMatchers("/public/**").
+                        ignoringRequestMatchers("/api/**"))
                 .authorizeHttpRequests((requests) -> requests.requestMatchers("/dashboard").hasAnyRole("STUDENT", "ADMIN")
                         .requestMatchers("/displayMessages/**").hasRole("ADMIN")
                         .requestMatchers("/admin/**").hasAnyRole("ADMIN")
                         .requestMatchers("/closeMsg/**").hasRole("ADMIN")
                         .requestMatchers("/student/**").hasRole("STUDENT")
-                        .requestMatchers("/displayProfile").hasAnyRole("STUDENT","ADMIN")
-                        .requestMatchers("/updateProfile").hasAnyRole("STUDENT","ADMIN")
+                        .requestMatchers("/displayProfile").hasAnyRole("STUDENT", "ADMIN")
+                        .requestMatchers("/updateProfile").hasAnyRole("STUDENT", "ADMIN")
                         .requestMatchers("/", "/home").permitAll()
                         .requestMatchers("/holidays/**").permitAll()
                         .requestMatchers("/contact").permitAll()
+                        .requestMatchers("/api/**").authenticated()
                         .requestMatchers("/saveMsg").permitAll()
-                        .requestMatchers("/favicon.ico").hasAnyRole("STUDENT","ADMIN")
+                        .requestMatchers("/favicon.ico").hasAnyRole("STUDENT", "ADMIN")
                         .requestMatchers("/courses").permitAll()
                         .requestMatchers("/about").permitAll()
                         .requestMatchers("/assets/**").permitAll()
@@ -46,6 +48,6 @@ public class ProjectSecurityConfig {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-    
+
 
 }
