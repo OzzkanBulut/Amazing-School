@@ -44,7 +44,7 @@ public class ContactRestController {
 
     }
 
-    @GetMapping("/saveMsg")
+    @PostMapping("/saveMsg")
 //    @ResponseBody
     public ResponseEntity<Response> saveMsg(@RequestHeader("invocationFrom")String invocationFrom,
                                             @RequestBody Contact contact){
@@ -74,7 +74,7 @@ public class ContactRestController {
         Response response = new Response("200","Deleted Successfully!");
 
         return ResponseEntity
-                .status(HttpStatus.OK)
+                .status                                                                                                                                                           (HttpStatus.OK)
                 .body(response);
 
 
