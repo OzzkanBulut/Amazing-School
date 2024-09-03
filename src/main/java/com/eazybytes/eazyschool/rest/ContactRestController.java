@@ -6,10 +6,7 @@ import com.eazybytes.eazyschool.repository.ContactRepository;
 import com.eazybytes.eazyschool.utils.constant.EazySchoolConstants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.RequestEntity;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,7 +17,9 @@ import java.util.stream.Collectors;
 @Slf4j
 @RestController // = @Controller + @ResponseBody, therefore, @ResponseBody is no longer needed
 //@Controller
-@RequestMapping("/api/contact")
+// Allow both xml and json
+@RequestMapping(value = "/api/contact",produces = {MediaType.APPLICATION_JSON_VALUE,MediaType.APPLICATION_XML_VALUE})
+@CrossOrigin(origins = "*") // Allow any domain
 public class ContactRestController {
 
     @Autowired
