@@ -6,7 +6,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Eazy School - Best Educational Institute for your Child</title>
+    <title>Amazing School - Best Educational Institute for your Child</title>
     <!-- Google fonts -->
     <link href="//fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Template CSS Style link -->
@@ -41,7 +41,7 @@
             <li class="alert alert-danger" role="alert" th:if="${!#strings.isEmpty(errorMessage)}"
                 th:text="${errorMessage}" />
             <div class="overview-wrap">
-                <h3 class="heading-21921" th:text="${eazyClass.name} + ' Students Details'"></h3>
+                <h3 class="heading-21921" th:text="${amazingClass.name} + ' Students Details'"></h3>
                 <button class="btn btn-style btn-style-3 text-left" type="button"
                         data-bs-toggle="modal" data-bs-target="#addStudent">ADD STUDENT</button>
             </div>
@@ -82,7 +82,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:each="person: ${eazyClass.persons}">
+            <tr th:each="person: ${amazingClass.persons}">
                 <td th:text="${person.name}"></td>
                 <td th:text="${person.email}"></td>
                 <td th:text="${person.mobileNumber}"></td>

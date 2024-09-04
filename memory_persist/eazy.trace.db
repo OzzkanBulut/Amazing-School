@@ -411,7 +411,7 @@ INSERT INTO CONTACT_MSG (NAME,MOBILE_NUM,EMAIL,SUBJECT,MESSAGE,STATUS,CREATED_AT
 	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:970)
 	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1014)
 	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1024)
-	at com.eazybytes.eazyschool.repository.ContactRepository.saveContactMsg(ContactRepository.java:22)
+	at repository.com.ozkanbulut.amazingschool.ContactRepository.saveContactMsg(ContactRepository.java:22)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
@@ -422,8 +422,8 @@ INSERT INTO CONTACT_MSG (NAME,MOBILE_NUM,EMAIL,SUBJECT,MESSAGE,STATUS,CREATED_AT
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
-	at com.eazybytes.eazyschool.repository.ContactRepository$$SpringCGLIB$$0.saveContactMsg(<generated>)
-	at com.eazybytes.eazyschool.service.ContactService.saveMessageDetails(ContactService.java:49)
+	at repository.com.ozkanbulut.amazingschool.ContactRepository$$SpringCGLIB$$0.saveContactMsg(<generated>)
+	at service.com.ozkanbulut.amazingschool.ContactService.saveMessageDetails(ContactService.java:49)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
@@ -435,8 +435,8 @@ INSERT INTO CONTACT_MSG (NAME,MOBILE_NUM,EMAIL,SUBJECT,MESSAGE,STATUS,CREATED_AT
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
-	at com.eazybytes.eazyschool.service.ContactService$$SpringCGLIB$$0.saveMessageDetails(<generated>)
-	at com.eazybytes.eazyschool.controller.ContactController.saveMessage(ContactController.java:55)
+	at service.com.ozkanbulut.amazingschool.ContactService$$SpringCGLIB$$0.saveMessageDetails(<generated>)
+	at controller.com.ozkanbulut.amazingschool.ContactController.saveMessage(ContactController.java:55)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
@@ -866,7 +866,7 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at com.eazybytes.eazyschool.EazyschoolApplication.main(EazyschoolApplication.java:10)
+	at com.ozkanbulut.amazingschool.AmazingschoolApplication.main(EazyschoolApplication.java:10)
 2024-07-29 23:32:04.950249+03:00 jdbc[10]: exception
 org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
@@ -935,7 +935,7 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at com.eazybytes.eazyschool.EazyschoolApplication.main(EazyschoolApplication.java:10)
+	at com.ozkanbulut.amazingschool.AmazingschoolApplication.main(EazyschoolApplication.java:10)
 2024-07-29 23:32:05.245459+03:00 jdbc[10]: exception
 org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
@@ -1008,7 +1008,7 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at com.eazybytes.eazyschool.EazyschoolApplication.main(EazyschoolApplication.java:10)
+	at com.ozkanbulut.amazingschool.AmazingschoolApplication.main(EazyschoolApplication.java:10)
 2024-07-29 23:32:05.263413+03:00 jdbc[10]: exception
 org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
@@ -1077,4 +1077,4 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at com.eazybytes.eazyschool.EazyschoolApplication.main(EazyschoolApplication.java:10)
+	at com.ozkanbulut.amazingschool.AmazingschoolApplication.main(EazyschoolApplication.java:10)
