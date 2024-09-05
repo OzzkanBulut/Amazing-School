@@ -154,17 +154,22 @@ This project is designed to be a flexible and scalable solution for educational 
 ![image](https://github.com/user-attachments/assets/86166138-06f4-4c26-9527-3896f62d8a25)
 **Courses**
 
+
 ![image](https://github.com/user-attachments/assets/81a11ecd-0c42-43c7-a17a-1ab92b22ed14)
 **Admin Dashboard**
 
-![image](https://github.com/user-attachments/assets/60effd0a-cffc-4ca4-aa2b-748a45b70be3)
+
+![image](https://github.com/user-attachments/assets/4c4c3ac5-0ccb-4c5b-ae95-2a86cb658ebd)
 **Student Dashboard**
+
 
 ![image](https://github.com/user-attachments/assets/9bc6dc7f-9b5d-4330-b3dd-73ae8eb350de)
 **Enrolled Courses**
 
+
 ![image](https://github.com/user-attachments/assets/0c8bd7e5-0144-42e7-be88-d7a748698110)
 **Contact Messages**
+
 
 ![image](https://github.com/user-attachments/assets/192e6baf-12e9-46c5-9715-4dc27323afea)
 **All Students**
